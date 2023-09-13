@@ -12,11 +12,11 @@ class PostmanEchoTest {
 
         given()
                 .baseUri("https://postman-echo.com")
-                .body("Привет") // отправляемые данные (заголовки и query можно выставлять аналогично)
+                .body("Hi") // отправляемые данные (заголовки и query можно выставлять аналогично)
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
-                .body("Data", equalTo("Привет"));
+                .body("data", equalTo("Hi"));
     }
 }
